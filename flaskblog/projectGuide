@@ -1,0 +1,12 @@
+pip install flask-wtf --user
+pip install secrets --user
+pip install flask-bcrypt --user # To hash password
+pip install flask-login --user
+sqlAlchemy
+	db.create_all() #To create db structure
+	db.drop_all() #To drop all row and table contents in db					
+	user_1 = User(username='Elango', email='el@demo.com', password='p123') # to add new instance to class User
+	db.session.add(user_1) # to add user_1 to db
+	db.session.commit() # to commit each changes in db
+	user=User.query.filter_by(username='Elango').first() # copying all details of user named Elango to var user
+	user.username , user.id ,  user.image_file # accesing different attributes of user
